@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Quicklist</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <img src="./img/icons/logo.svg" alt="quicklist" class="logo" />
+      </header>
+
+      <section class="content">
+        <a href="#" class="link-button" aria-label="Voltar">
+          <img src="./img/icons/link-button.svg" alt="" class="link-button-image" />
+        </a>
+
+        <h1 class="text-title page-title">Compras da semana</h1>
+
+        <form class="add-form" id="add-form" novalidate>
+          <input
+            type="text"
+            id="item-input"
+            class="item-input text-paragraph"
+            placeholder="Adicione um novo item"
+            autocomplete="off"
+          />
+          <button type="submit" class="add-button text-label">
+            Adicionar item
+          </button>
+        </form>
+
+        <ul class="items-list" id="items-list" aria-live="polite"></ul>
+
+        <div
+          class="alert"
+          id="remove-alert"
+          role="status"
+          aria-live="polite"
+          hidden
+        >
+          <div class="alert-content">
+            <img src="./img/icons/warning.svg" alt="Aviso" class="alert-icon" />
+            <span class="text-label">O item foi removido da lista</span>
+          </div>
+          <button
+            class="alert-close"
+            id="alert-close"
+            type="button"
+            aria-label="Fechar alerta"
+          >
+            &times;
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
